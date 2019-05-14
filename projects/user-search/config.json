@@ -1,0 +1,19 @@
+{
+  "app": {
+    "base": "http://localhost:4200"
+  },
+  "api": {
+    "base": "https://api.github.com/search",
+    "paths": {
+      "endpoints": {
+        "repositories": "repositories",
+        "commits": "commits",
+        "code": "code",
+        "issues": "issues",
+        "users": "users",
+        "topics": "topics",
+        "labels": "labels"
+      }
+    }
+  }
+}
