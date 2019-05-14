@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "postinstall": "npm run build-test-kit && npm run build-ng-kit",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "lint": "ng lint",
     "test": "jest --passWithNoTests",
-    "lint": "ng lint"
+    "build": "npm run postinstall && npm run build-user-search",
+    "build-test-kit": "ng build github-search-test-kit",
+    "build-ng-kit": "ng build github-search-ng-kit",
+    "build-user-search": "ng build --prod"
   },
   "husky": {
     "hooks": {

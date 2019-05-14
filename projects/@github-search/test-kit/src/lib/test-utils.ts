@@ -42,7 +42,7 @@ export const buttonClickEvents = {
  */
 export function click(
   el: DebugElement | HTMLElement,
-  eventObj: any = ButtonClickEvents.left
+  eventObj: any = buttonClickEvents.left
 ): void {
   if (el instanceof HTMLElement) {
     el.click();
