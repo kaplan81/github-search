@@ -5,11 +5,38 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "jest",
+    "lint": "ng lint"
   },
-  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint",
+      "pre-push": "npm test"
+    }
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.spec.json"
+      },
+      "__TRANSFORM_HTML__": true
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.config.ts",
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      "@user-search-app/(.*)": "<rootDir>/projects/user-search/src/app/app/$1",
+      "@user-search-core/(.*)": "<rootDir>/projects/user-search/src/app/_core/$1",
+      "@user-search-environments/(.*)": "<rootDir>/projects/user-search/src/environments/$1",
+      "@user-search-shared/(.*)": "<rootDir>/projects/user-search/src/app/_shared/$1",
+      "^@github-search/ng-kit$": "<rootDir>/dist/@github-search/ng-kit",
+      "^@github-search/test-kit$": "<rootDir>/dist/@github-search/test-kit"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/projects/@github-search/ng-kit/package.json",
+      "<rootDir>/projects/@github-search/test-kit/package.json"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/cdk": "^7.3.7",
