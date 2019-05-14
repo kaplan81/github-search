@@ -21,14 +21,20 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
+            "stylePreprocessorOptions": {
+              "includePaths": ["projects/first-app/src/scss"]
+            },
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "config.json",
+                "input": "projects/user-search",
+                "output": "/"
+              }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -83,26 +89,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -128,9 +124,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -177,9 +171,7 @@
               "projects/user-search/src/favicon.ico",
               "projects/user-search/src/assets"
             ],
-            "styles": [
-              "projects/user-search/src/styles.scss"
-            ],
+            "styles": ["projects/user-search/src/styles.scss"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -234,9 +226,7 @@
             "polyfills": "projects/user-search/src/polyfills.ts",
             "tsConfig": "projects/user-search/tsconfig.spec.json",
             "karmaConfig": "projects/user-search/karma.conf.js",
-            "styles": [
-              "projects/user-search/src/styles.scss"
-            ],
+            "styles": ["projects/user-search/src/styles.scss"],
             "scripts": [],
             "assets": [
               "projects/user-search/src/favicon.ico",
@@ -251,9 +241,7 @@
               "projects/user-search/tsconfig.app.json",
               "projects/user-search/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -279,9 +267,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "projects/user-search-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
