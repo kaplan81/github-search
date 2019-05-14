@@ -22,7 +22,9 @@
       },
       "__TRANSFORM_HTML__": true
     },
-    "setupFilesAfterEnv": "<rootDir>/jest.config.ts",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.config.ts"
+    ],
     "testURL": "http://localhost/",
     "moduleNameMapper": {
       "@user-search-app/(.*)": "<rootDir>/projects/user-search/src/app/app/$1",
