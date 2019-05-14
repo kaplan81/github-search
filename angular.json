@@ -112,6 +112,31 @@
           }
         }
       }
+    },
+    "github-search-ng-kit": {
+      "root": "projects/@github-search/ng-kit",
+      "sourceRoot": "projects/@github-search/ng-kit/src",
+      "projectType": "library",
+      "prefix": "ghb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/@github-search/ng-kit/tsconfig.lib.json",
+            "project": "projects/@github-search/ng-kit/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/@github-search/ng-kit/tsconfig.lib.json",
+              "projects/@github-search/ng-kit/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
     }
   },
   "defaultProject": "user-search"

@@ -18,8 +18,9 @@
       "@user-search-core/*": ["./projects/user-search/src/app/_core/*"],
       "@user-search-environments/*": ["./projects/user-search/src/environments/*"],
       "@user-search-shared/*": ["./projects/user-search/src/app/_shared/*"],
-      "@github-search/ng-kit": ["dist/@github-search/ng-kit"],
-      "@github-search/test-kit": ["dist/@github-search/test-kit"]
+      "@github-search/ng-kit": ["dist/@github-search/ng-kit", "dist/github-search/ng-kit"],
+      "@github-search/test-kit": ["dist/@github-search/test-kit"],
+      "@github-search/ng-kit/*": ["dist/github-search/ng-kit/*"]
     }
   }
 }
