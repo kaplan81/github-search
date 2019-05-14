@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "ng lint"
   },
   "husky": {
@@ -22,7 +22,7 @@
       },
       "__TRANSFORM_HTML__": true
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.config.ts",
+    "setupFilesAfterEnv": "<rootDir>/jest.config.ts",
     "testURL": "http://localhost/",
     "moduleNameMapper": {
       "@user-search-app/(.*)": "<rootDir>/projects/user-search/src/app/app/$1",
