@@ -2,6 +2,11 @@
  * Public API Surface of test-kit
  */
 
-export * from './lib/test-kit.service';
-export * from './lib/test-kit.component';
-export * from './lib/test-kit.module';
+export {
+  ActivatedRouteProps,
+  ActivatedRouteSnapshotStub,
+  ActivatedRouteStub
+} from './lib/activated-route-stub';
+export { ComponentSuite, ComponentSuiteElements } from './lib/component-suite';
+export { RouterLinkStubDirective } from './lib/router-link-directive-stub';
+export { click, insureAngularZone } from './lib/test-utils';
