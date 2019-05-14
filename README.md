@@ -1,4 +1,4 @@
-# Github Search
+# GitHub Search
 
 > An Angular monorepo structure example
 
