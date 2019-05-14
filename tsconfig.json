@@ -11,12 +11,15 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@user-search-app/*": ["./projects/user-search/src/app/app/*"],
+      "@user-search-core/*": ["./projects/user-search/src/app/_core/*"],
+      "@user-search-environments/*": ["./projects/user-search/src/environments/*"],
+      "@user-search-shared/*": ["./projects/user-search/src/app/_shared/*"],
+      "@github-search/ng-kit": ["dist/@github-search/ng-kit"],
+      "@github-search/test-kit": ["dist/@github-search/test-kit"]
+    }
   }
 }

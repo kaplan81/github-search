@@ -1,11 +1,20 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "../../out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@user-search-app/*": ["./src/app/app/*"],
+      "@user-search-core/*": ["./src/app/_core/*"],
+      "@user-search-environments/*": ["./src/environments/*"],
+      "@user-search-shared/*": ["./src/app/_shared/*"],
+      "@github-search/ng-kit": ["../../dist/@github-search/ng-kit"],
+      "@github-search/test-kit": ["../../dist/@github-search/test-kit"]
+    }
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ]
+  "angularCompilerOptions": {
+    "preserveWhitespaces": "off"
+  },
+  "exclude": ["**/*.spec.ts"]
 }
