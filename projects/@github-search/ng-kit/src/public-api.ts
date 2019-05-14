@@ -1,7 +1,7 @@
 /*
  * Public API Surface of ng-kit
  */
-
-export * from './lib/ng-kit.service';
-export * from './lib/ng-kit.component';
-export * from './lib/ng-kit.module';
+export * from './lib/abstracts/container.abstract';
+export * from './lib/services/config-file/config-file.service';
+export * from './lib/services/error/error.service';
+export * from './lib/services/router-events/router-events.service';

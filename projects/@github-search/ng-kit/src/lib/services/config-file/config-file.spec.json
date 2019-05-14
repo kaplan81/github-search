@@ -1,0 +1,8 @@
+{
+  "app": {
+    "base": "http://localhost:4200"
+  },
+  "api": {
+    "base": "https://business-school-development.dev.k8.akelius.com"
+  }
+}

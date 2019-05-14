@@ -32,7 +32,7 @@ export function newEvent(eventName: string, bubbles = false, cancelable = false)
  * Button events to pass to `DebugElement.triggerEventHandler` for RouterLink event handler\
  * See https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button
  */
-export const ButtonClickEvents = {
+export const buttonClickEvents = {
   left: { button: 0 },
   right: { button: 2 }
 };
