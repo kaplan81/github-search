@@ -22,8 +22,8 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 This project does not contain unit testing yet.
 
-However its configuration is ready to work with Jest.
+However its configuration is ready to work with [Jest](https://jestjs.io/).
 
 ## End-to-end tests
 
-e2e testing may be provided in the future with [cypress](https://www.cypress.io/)
+e2e testing may be provided in the future with [Cypress](https://www.cypress.io/)
