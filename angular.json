@@ -137,6 +137,30 @@
           }
         }
       }
+    },
+    "github-search-test-kit": {
+      "root": "projects/@github-search/test-kit",
+      "sourceRoot": "projects/@github-search/test-kit/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/@github-search/test-kit/tsconfig.lib.json",
+            "project": "projects/@github-search/test-kit/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/@github-search/test-kit/tsconfig.lib.json",
+              "projects/@github-search/test-kit/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
     }
   },
   "defaultProject": "user-search"
