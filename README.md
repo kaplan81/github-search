@@ -1,27 +1,29 @@
-# GithubSearch
+# Github Search
+
+> An Angular monorepo structure example
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
+However many changes have been performed on it by following these guidelines of these articles:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [The Angular MonoRepo (I): configurations](https://medium.com/@gesteira2046/the-angular-monorepo-i-configurations-2a2884da66ac)
+* [The Angular MonoRepo (II): folders](https://medium.com/@gesteira2046/the-angular-monorepo-ii-folders-f902a44309ea)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Serve
+
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project does not contain unit testing yet.
 
-## Running end-to-end tests
+However its configuration is ready to work with Jest.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## End-to-end tests
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+e2e testing may be provided in the future with [cypress](https://www.cypress.io/)
