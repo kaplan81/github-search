@@ -1,8 +1,8 @@
-import "jest-preset-angular";
+import 'jest-preset-angular';
 
-global["CSS"] = null;
+global['CSS'] = null;
 
-Object.defineProperty(document.body.style, "transform", {
+Object.defineProperty(document.body.style, 'transform', {
   value: () => {
     return {
       enumerable: true,
@@ -11,18 +11,18 @@ Object.defineProperty(document.body.style, "transform", {
   }
 });
 
-Object.defineProperty(window, "getComputedStyle", {
-  value: () => ["-webkit-appearance"]
+Object.defineProperty(window, 'getComputedStyle', {
+  value: () => ['-webkit-appearance']
 });
 
 const storageMock = () => {
   let storage = {};
   return {
     getItem: key => (key in storage ? storage[key] : null),
-    setItem: (key, value) => (storage[key] = value || ""),
+    setItem: (key, value) => (storage[key] = value || ''),
     removeItem: key => delete storage[key],
     clear: () => (storage = {})
   };
 };
-Object.defineProperty(window, "localStorage", { value: storageMock() });
-Object.defineProperty(window, "sessionStorage", { value: storageMock() });
+Object.defineProperty(window, 'localStorage', { value: storageMock() });
+Object.defineProperty(window, 'sessionStorage', { value: storageMock() });
