@@ -12,8 +12,10 @@ export class UsersComponent {
   users$: Observable<any>;
 
   constructor(private route: ActivatedRoute, private userService: fromUsersServices.UserService) {
-    this.users$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.userService.getUsers(params.get('id')))
+    this.users$ = this.route.queryParamMap.pipe(
+      switchMap((params: ParamMap) => {
+        return this.userService.getUsers(params.get('q'));
+      })
     );
   }
 }
