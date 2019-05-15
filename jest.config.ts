@@ -1,5 +1,6 @@
 import 'jest-preset-angular';
 
+// tslint:disable-next-line
 global['CSS'] = null;
 
 Object.defineProperty(document.body.style, 'transform', {
