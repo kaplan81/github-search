@@ -22,6 +22,7 @@ export class UserService {
     this.userApi = `${this.configService.apiBase}/${this.configService.apiPathEndpoints.users}`;
   }
 
+  // TODO: users model
   getUsers(search: string): Observable<any> {
     const url = `${this.userApi}?${UserService.userApiQuery}=${search}`;
 
