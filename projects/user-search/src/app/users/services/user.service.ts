@@ -5,6 +5,7 @@ import { ConfigService } from '@user-search-core/config.service';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
+// Do not provide in UsersModule to avoid circular dependency warning.
 @Injectable({
   providedIn: 'root'
 })
