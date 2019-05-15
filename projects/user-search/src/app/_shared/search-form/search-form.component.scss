@@ -3,13 +3,14 @@
 .usr-search-form__form {
   display: flex;
   .usr-search-form__input {
+    margin-right: $gap;
+    padding: $pinch $gap-;
+    background-color: $background;
     font-size: 1rem;
     line-height: $space * 1.6 !important;
     border: $border solid $grey-border;
     border-radius: $pinch;
     border: 1px solid $grey-border;
-    padding: $pinch $gap-;
-    margin-right: $gap;
   }
   .usr-search-form__button {
     border-radius: $pinch;
