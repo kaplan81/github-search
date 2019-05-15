@@ -1,0 +1,28 @@
+$github-theme: (
+  primary: (
+    main: #23282d,
+    darker: #000002,
+    lighter: #4b5056
+  ),
+  secondary: (
+    main: #0366d6,
+    darker: #003ca4,
+    lighter: #6092ff
+  ),
+  text: (
+    primary: (
+      main: white,
+      darker: white,
+      lighter: white
+    ),
+    secondary: (
+      main: white,
+      darker: white,
+      lighter: rgba(black, 0.87)
+    )
+  ),
+  background: #fff,
+  foreground: #eff3f6,
+  warning: #d85a17,
+  error: #b00020
+);

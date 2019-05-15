@@ -53,7 +53,10 @@
                 "output": "/"
               }
             ],
-            "styles": ["projects/user-search/src/styles.scss"],
+            "styles": [
+              "projects/user-search/src/reset.scss",
+              "projects/user-search/src/styles.scss"
+            ],
             "scripts": [],
             "es5BrowserSupport": true
           },
