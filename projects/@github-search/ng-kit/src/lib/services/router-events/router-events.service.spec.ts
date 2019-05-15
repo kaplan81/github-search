@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-variable */
-import { insureAngularZone } from '@akelius-bsc/test-kit';
 import { Component, NgZone } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { NavigationEnd, NavigationStart, Router, RouterEvent } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { insureAngularZone } from '@github-search/test-kit';
 import { SubscribedContainerWithRouter } from '../../abstracts/container.abstract';
 import { RouterEventsService } from './router-events.service';
 

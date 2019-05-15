@@ -1,9 +1,9 @@
 // TODO: implementation of schematics that generate this boilerplate.
 
 /* tslint:disable:no-unused-variable */
-import { ComponentSuite, ComponentSuiteElements } from '@akelius-bsc/test-kit';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppComponent } from '@asset-app/containers/app/app.component';
+import { ComponentSuite, ComponentSuiteElements } from '@github-search/test-kit';
+import { AppComponent } from '@user-search-app/containers/app/app.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;

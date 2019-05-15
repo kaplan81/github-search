@@ -3,6 +3,6 @@
     "base": "http://localhost:4200"
   },
   "api": {
-    "base": "https://business-school-development.dev.k8.akelius.com"
+    "base": "https://api.github.com/search"
   }
 }
