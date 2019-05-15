@@ -1,0 +1,25 @@
+@import 'variables';
+
+.usr-search-form__form {
+  display: flex;
+  .usr-search-form__input {
+    font-size: 1rem;
+    line-height: $space * 1.6 !important;
+    border: $border solid $input-border-color;
+    border-radius: $pinch;
+    border: 1px solid #d1d5da;
+    padding: $pinch $gap-;
+    margin-right: $gap;
+  }
+  .usr-search-form__button {
+    border-radius: $pinch;
+    background-color: $foreground;
+    font-size: 0.9rem;
+    color: $primary;
+    font-weight: bold;
+    padding: 0 $gap;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

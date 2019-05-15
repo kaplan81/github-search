@@ -1,0 +1,4 @@
+<form class="usr-search-form__form" #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+  <input class="usr-search-form__input" type="text" #query name="query" placeholder="Search GitHub" ngModel>
+  <button class="usr-search-form__button" type="submit" [disabled]="!query.value">Search</button>
+</form>

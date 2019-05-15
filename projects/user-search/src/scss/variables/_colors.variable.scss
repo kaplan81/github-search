@@ -2,3 +2,5 @@
 @import 'themes/github-theme.variable';
 
 @include theme($github-theme);
+
+$input-border-color: #d1d5da;
