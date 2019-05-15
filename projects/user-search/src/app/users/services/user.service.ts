@@ -4,7 +4,7 @@ import { ErrorService } from '@github-search/ng-kit';
 import { ConfigService } from '@user-search-core/config.service';
 import * as fromUsersModels from '@user-search-users/models';
 import { from, Observable } from 'rxjs';
-import { catchError, concatMap, map, switchMap, take, toArray } from 'rxjs/operators';
+import { catchError, concatMap, map, switchMap, take, tap, toArray } from 'rxjs/operators';
 
 // Do not provide in UsersModule to avoid circular dependency warning.
 @Injectable({
@@ -28,7 +28,11 @@ export class UserService {
     this.userApi = `${this.configService.apiBase}/${this.configService.apiPathEndpoints.users}`;
   }
 
-  getUsers(query: string, page?: number, perPage?: number): Observable<any> {
+  getUsers(
+    query: string,
+    page?: number,
+    perPage?: number
+  ): Observable<fromUsersModels.MappedUsersSearch> {
     const pageNumber: number = page ? page : UserService.userPageDefault;
     const perPageCount: number = perPage ? perPage : UserService.userPerPageDefault;
     const url = `${this.userApi}?${UserService.userApiQuery}=${query}&${
@@ -51,6 +55,9 @@ export class UserService {
           map((users: fromUsersModels.User[]) => {
             return { ...mappedUsersSearch, users };
           }),
+          tap((result: fromUsersModels.MappedUsersSearch) =>
+            console.log('Users were retrieved:::', result)
+          ),
           catchError(this.errorService.handleHttpError<any>('getUsers'))
         );
       })
