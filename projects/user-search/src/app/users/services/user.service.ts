@@ -48,7 +48,7 @@ export class UserService {
           );
           const totalPages: number = Math.ceil(totalCount / perPageCount);
 
-          return { currentPage, perPageCount, totalCount, totalPages, users };
+          return { currentPage, perPageCount, query, totalCount, totalPages, users };
         }
       ),
       switchMap((mappedUsersSearch: fromUsersModels.MappedUsersSearch) => {

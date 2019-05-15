@@ -57,3 +57,24 @@ h3.usr-users-pure__users-count {
     }
   }
 }
+
+.usr-users-pure__pagination {
+  min-height: $space * 5;
+  align-items: center;
+  button {
+    height: 40%;
+    border-radius: $pinch;
+    background-color: $foreground;
+    font-size: 0.9rem;
+    color: $primary;
+    font-weight: bold;
+    padding: 0 $gap;
+    &:hover {
+      cursor: pointer;
+    }
+    &[disabled] {
+      color: $grey-border;
+      cursor: not-allowed;
+    }
+  }
+}

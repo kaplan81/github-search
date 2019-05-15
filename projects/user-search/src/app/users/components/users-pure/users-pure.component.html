@@ -22,6 +22,13 @@
       <div class="github-public-gists" *ngIf="user.public_gists">Public gists: <span>{{ user.public_gists }}</span></div>
     </div>
   </div>
+  <div class="usr-users-pure__pagination grid-10">
+    <div class="offset col-2"></div>
+    <button class="prev-btn col-2" [disabled]="isDisabledPrev(users.currentPage)" (click)="goToPrevPage(users.currentPage, users.query)">Previous</button>
+    <div class="offset col-1"></div>
+    <button class="next-btn col-2" [disabled]="isDisabledNext(users.currentPage, users.totalPages)" (click)="goToNextPage(users.currentPage, users.query)">Next</button>
+    <div class="offset col-2"></div>
+  </div>
 </ng-container>
 
 
