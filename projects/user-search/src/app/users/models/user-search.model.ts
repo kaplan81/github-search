@@ -29,8 +29,9 @@ export interface UserItem {
 }
 
 export interface MappedUsersSearch {
-  totalCount: number;
-  pageNumber: number;
+  currentPage: number;
   perPageCount: number;
+  totalCount: number;
+  totalPages: number;
   users: string[] | fromUsersModels.User[];
 }

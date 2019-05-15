@@ -5,9 +5,9 @@
   .usr-search-form__input {
     font-size: 1rem;
     line-height: $space * 1.6 !important;
-    border: $border solid $input-border-color;
+    border: $border solid $grey-border;
     border-radius: $pinch;
-    border: 1px solid #d1d5da;
+    border: 1px solid $grey-border;
     padding: $pinch $gap-;
     margin-right: $gap;
   }

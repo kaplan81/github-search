@@ -33,11 +33,11 @@ export class UserService {
     page?: number,
     perPage?: number
   ): Observable<fromUsersModels.MappedUsersSearch> {
-    const pageNumber: number = page ? page : UserService.userPageDefault;
+    const currentPage: number = page ? page : UserService.userPageDefault;
     const perPageCount: number = perPage ? perPage : UserService.userPerPageDefault;
     const url = `${this.userApi}?${UserService.userApiQuery}=${query}&${
       UserService.userPage
-    }=${pageNumber}&${UserService.userPerPage}=${perPageCount}`;
+    }=${currentPage}&${UserService.userPerPage}=${perPageCount}`;
 
     return this.http.get<fromUsersModels.UsersSearch>(url).pipe(
       map(
@@ -46,8 +46,9 @@ export class UserService {
           const users: string[] = usersSearch.items.map(
             (item: fromUsersModels.UserItem) => item.url
           );
+          const totalPages: number = Math.ceil(totalCount / perPageCount);
 
-          return { totalCount, pageNumber, perPageCount, users };
+          return { currentPage, perPageCount, totalCount, totalPages, users };
         }
       ),
       switchMap((mappedUsersSearch: fromUsersModels.MappedUsersSearch) => {

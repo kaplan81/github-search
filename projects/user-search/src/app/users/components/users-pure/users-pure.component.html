@@ -1,3 +1,27 @@
-<pre>
-  {{ users | json }}
-</pre>
+<ng-container *ngIf="users">
+  <h3 class="usr-users-pure__users-count">{{ users.totalCount }} users</h3>
+  <div class="usr-users-pure__user grid-12" *ngFor="let user of users.users">
+    <div class="user-avatar col-1">
+      <img [src]="user.avatar_url">
+    </div>
+    <div class="user-info col-11 col-md-9">
+      <div class="user-ref">
+        <a class="user-link" [href]="user.html_url" target="_blank">{{ user.login }}</a>
+        <div class="user-name">{{ user.name }}</div>
+      </div>
+      <div class="user-bio" *ngIf="user.bio">{{ user.bio }}</div>
+      <div class="user-contact">
+        <div class="user-location" *ngIf="user.location">I live in {{ user.location }}</div>
+        <div class="user-email" *ngIf="user.email">and my email is {{ user.email }}</div>
+      </div>
+    </div>
+    <div class="github-info col-md-2 hidden-md-down">
+      <div class="github-followers" *ngIf="user.followers">Followers: <span>{{ user.followers }}</span></div>
+      <div class="github-following" *ngIf="user.followers">Following: <span>{{ user.following }}</span></div>
+      <div class="github-public-repos" *ngIf="user.public_repos">Public repos: <span>{{ user.public_repos }}</span></div>
+      <div class="github-public-gists" *ngIf="user.public_gists">Public gists: <span>{{ user.public_gists }}</span></div>
+    </div>
+  </div>
+</ng-container>
+
+

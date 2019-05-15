@@ -28,7 +28,7 @@
   }
   main {
     grid-area: main;
-    margin: 0 auto;
+    margin: $space auto;
     width: 100%;
     @include bigger-than(md) {
       width: 90%;

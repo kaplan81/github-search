@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import * as fromUsersModels from '@user-search-users/models';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -7,5 +8,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   templateUrl: './users-pure.component.html'
 })
 export class UsersPureComponent {
-  @Input() users: any;
+  @Input() users: fromUsersModels.MappedUsersSearch;
 }

@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+
+h3.usr-users-pure__users-count {
+  font-weight: bold;
+  padding: ($space * 1.5) $space;
+  @include bigger-than(md) {
+    padding: ($space * 1.5) 0;
+  }
+}
+
+.usr-users-pure__user {
+  padding: ($space * 1.5) $space;
+  @include bigger-than(md) {
+    padding: ($space * 1.5) 0;
+  }
+  border-top: 1px solid $grey-border;
+  font-size: 1.2rem;
+  .user-avatar {
+    img {
+      width: $space * 2.5;
+    }
+  }
+  .user-info {
+    .user-ref {
+      display: flex;
+      padding-bottom: $gap;
+      .user-link {
+        color: $secondary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .user-name {
+        margin-left: $gap;
+      }
+    }
+    .user-bio {
+      padding-bottom: $gap;
+      font-size: 1rem;
+      color: $grey-text;
+    }
+    .user-contact {
+      display: flex;
+      font-size: 0.9rem;
+      color: $grey-text;
+    }
+  }
+  .github-info {
+    font-size: 0.8rem;
+    color: $grey-text;
+    span {
+      font-weight: bold;
+    }
+    * {
+      padding-bottom: $pinch;
+    }
+  }
+}
