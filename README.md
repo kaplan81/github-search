@@ -20,9 +20,7 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Unit tests
 
-This project does not contain unit testing yet.
-
-However its configuration is ready to work with [Jest](https://jestjs.io/).
+Run `npm test` to test the project with [Jest](https://jestjs.io/).
 
 ## End-to-end tests
 
