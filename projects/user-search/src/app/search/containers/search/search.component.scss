@@ -1,9 +1,19 @@
 @import 'variables';
+@import 'mixins';
 
-.usr-search-label {
-  display: flex;
-  align-items: center;
-  h2 {
-    margin: $space $gap;
+:host {
+  display: block;
+  margin: $space;
+  padding: $space;
+  @include bigger-than(md) {
+    margin: $space * 2;
+    padding: $space * 2;
+  }
+  .usr-search-label {
+    display: flex;
+    align-items: center;
+    h2 {
+      margin: $space $gap;
+    }
   }
 }
