@@ -1,3 +1,5 @@
+<usr-loading *ngIf="!users"></usr-loading>
+
 <ng-container *ngIf="users">
   <h3 class="usr-users-pure__users-count">{{ users.totalCount }} users</h3>
   <div class="usr-users-pure__user grid-12" *ngFor="let user of users.users">
