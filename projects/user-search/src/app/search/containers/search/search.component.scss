@@ -1,0 +1,9 @@
+@import 'variables';
+
+.usr-search-label {
+  display: flex;
+  align-items: center;
+  h2 {
+    margin: $space $gap;
+  }
+}
