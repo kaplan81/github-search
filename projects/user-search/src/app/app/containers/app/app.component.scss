@@ -36,9 +36,6 @@
     @include bigger-than(xl) {
       width: 80%;
     }
-    h2 {
-      margin: $space $gap;
-    }
     .grid-12,
     .grid-10 {
       margin: $space $gap;
@@ -50,6 +47,13 @@
         min-height: $space * 2.5;
         line-height: $space * 2.5;
         background-color: $foreground;
+      }
+    }
+    .usr-search-label {
+      display: flex;
+      align-items: center;
+      h2 {
+        margin: $space $gap;
       }
     }
   }
