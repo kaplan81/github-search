@@ -36,6 +36,7 @@
       "@user-search-environments/(.*)": "<rootDir>/projects/user-search/src/environments/$1",
       "@user-search-shared/(.*)": "<rootDir>/projects/user-search/src/app/_shared/$1",
       "@user-search-search/(.*)": "<rootDir>/projects/user-search/src/app/search/$1",
+      "@user-search-users/(.*)": "<rootDir>/projects/user-search/src/app/users/$1",
       "^@github-search/ng-kit$": "<rootDir>/dist/@github-search/ng-kit",
       "^@github-search/test-kit$": "<rootDir>/dist/@github-search/test-kit"
     },

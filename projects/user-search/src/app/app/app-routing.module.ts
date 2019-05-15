@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: '../search/search.module#SearchModule'
   },
   {
+    path: 'users',
+    loadChildren: '../users/users.module#UsersModule'
+  },
+  {
     path: '**',
     redirectTo: '/search'
   }

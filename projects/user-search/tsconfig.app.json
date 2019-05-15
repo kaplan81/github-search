@@ -10,6 +10,7 @@
       "@user-search-environments/*": ["./src/environments/*"],
       "@user-search-shared/*": ["./src/app/_shared/*"],
       "@user-search-search/*": ["./src/app/search/*"],
+      "@user-search-users/*": ["./src/app/users/*"],
       "@github-search/ng-kit": ["../../dist/@github-search/ng-kit"],
       "@github-search/test-kit": ["../../dist/@github-search/test-kit"]
     }

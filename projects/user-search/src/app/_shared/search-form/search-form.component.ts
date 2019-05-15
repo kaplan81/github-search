@@ -12,7 +12,7 @@ export class SearchFormComponent {
   constructor(private router: Router) {}
 
   search(form: NgForm): void {
-    const navigationExtras: NavigationExtras = { queryParams: { query: form.value.query } };
+    const navigationExtras: NavigationExtras = { queryParams: { q: form.value.query } };
     this.router.navigate(['/users'], navigationExtras).then(() => form.reset());
   }
 }
