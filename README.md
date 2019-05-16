@@ -13,6 +13,10 @@ By following this architecture we make our project much more scalable and at the
 
 Exactly...
 
+## User Search App
+
+<img src="screenshots/github-user-search-home.png">
+
 ## Up and running
 Please make sure that you have NodeJS LTS installed in your machine.
 
