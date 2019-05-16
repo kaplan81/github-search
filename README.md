@@ -16,6 +16,8 @@ Exactly...
 ## User Search App
 
 <img src="screenshots/github-user-search-home.png">
+<img src="screenshots/github-user-search-users-list.png">
+<img src="screenshots/github-user-search-users-prev-next-btns.png">
 
 ## Up and running
 Please make sure that you have NodeJS LTS installed in your machine.
