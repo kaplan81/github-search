@@ -32,6 +32,8 @@ If you click on the login name of a user a new tab with the corresponding GitHub
 <img src="screenshots/github-user-search-users-list.png">
 <img src="screenshots/github-user-search-users-prev-next-btns.png">
 
+Oh, and if you want to go back to the home page just click on the GitHub Octicon at the top left corner.
+
 ## Up and running
 Please make sure that you have NodeJS LTS installed in your machine.
 
