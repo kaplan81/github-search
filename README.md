@@ -16,6 +16,7 @@ Exactly...
 ## User Search App
 
 It is simple: the home page shows a search section with a field to find users.
+
 <img src="screenshots/github-user-search-home.png">
 
 A routing navigation takes you to the users page with a detailed list about each of them.
@@ -25,6 +26,7 @@ The results are paginated by 10 and you can navigate to the next or the previous
 A shared search form component appears in the header. It has the same functionality as the one in the home page.
 
 If you click on the login name of a user a new tab with the corresponding GitHub Page gets open.
+
 <img src="screenshots/github-user-search-users-list.png">
 <img src="screenshots/github-user-search-users-prev-next-btns.png">
 
