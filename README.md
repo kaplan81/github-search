@@ -17,6 +17,8 @@ Exactly...
 
 It is simple: the home page shows a search section with a field to find users.
 
+Let's see what happens when we look for "kaplan".
+
 <img src="screenshots/github-user-search-home.png">
 
 A routing navigation takes you to the users page with a detailed list about each of them.
