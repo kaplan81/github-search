@@ -9,6 +9,10 @@ However many changes have been performed on it by following these guidelines of 
 * [The Angular MonoRepo (I): configurations](https://medium.com/@gesteira2046/the-angular-monorepo-i-configurations-2a2884da66ac)
 * [The Angular MonoRepo (II): folders](https://medium.com/@gesteira2046/the-angular-monorepo-ii-folders-f902a44309ea)
 
+By following this architecture we make our project much more scalable and at the same time makes much easier so sync all the packages. Now you only want an app to perform searches on users, but what if in the future you need other applications that are extremely similar but do other types of searches?..
+
+Exactly...
+
 ## Up and running
 Please make sure that you have NodeJS LTS installed in your machine.
 
@@ -34,19 +38,19 @@ e2e testing may be provided in the future with [Cypress](https://www.cypress.io/
 
 This project provides a suggested folder structure to implement [NGRX](https://ngrx.io/) in the future. This is the reason why many folders only contain a Typescript barrel file.
 
-Nevertheless it is worth adoptinng this folder structure since it makes a separation of concerns between container components and pure/presentational components.
+Nevertheless it is worth adoptinng this folder structure since it makes a very clear separation of concerns between container components and pure/presentational components. This way you can set `ChangeDetectionStrategy.OnPush` in all your components.
 
 ## Libraries
 
 2 libraries have been created with the Angular CLI:
 
-* ng-kit for Angular features (mostly declarations and services) that may be used by the various apps of the monorepo. For instance check out how `RouterEventsService` is implemented in `app.component.ts`. Or how `ConfigService` is implemented in `user.service.ts`: it takes all the api strings from a configuration file and this functionality can be shared across applications. 
+* `ng-kit` for Angular features (mostly declarations and services) that may be used by the various apps of the monorepo. For instance check out how `RouterEventsService` is implemented in `app.component.ts`. Or how `ConfigService` is implemented in `user.service.ts`: it takes all the api strings from a configuration file and this functionality can be shared across applications. 
 
-* test-kit contains test utilities, e.g. `component-suite.ts` which generates all the boilerplate needed on both shallow and integration unit tests (`fixture`, `component`, `debugEl` and `nativeEl`). This saves a lot of lines of code and my specs are much more readable.
+* `test-kit` contains test utilities, e.g. `component-suite.ts` which generates all the boilerplate needed on both shallow and integration unit tests (`fixture`, `component`, `debugEl` and `nativeEl`). This saves a lot of lines of code and my specs are much more readable.
 
 ## CSS Framework
 
-The `scss` folder in `user-sear` application takes care of all the necessary CSS infrastructure.
+The `scss` folder in the `user-search` application takes care of all the necessary CSS infrastructure.
 
 `reset.scss` is based on [Eric Meyer's reset](https://meyerweb.com/eric/tools/css/reset).
 
