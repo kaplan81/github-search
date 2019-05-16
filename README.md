@@ -63,7 +63,7 @@ The rest of the files are partials to be imported in `styles.scss`:
 
 \*"rules" are utility classes to be declared on our templates.
 
-There is also a Grid System implemented. It is pretty much Bootstrap-like but rows are now grid displayed divs.
+There is also a Grid System implemented. It is pretty much Bootstrap-like but rows are now grid displayed divs. You can see how this declarations are done in `users-pure.component.html` for instance.
 
 The main benefit we obtain is:
 
